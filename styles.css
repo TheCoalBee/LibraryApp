@@ -1,0 +1,171 @@
+* {
+    margin:0;
+    padding:0;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#bookshelf {
+    display:flex;
+    gap:15px;
+    flex-wrap: wrap;
+}
+
+.container {
+    position:relative;
+    width:150px;
+    background-color:gray;
+    display:flex;
+    flex-direction: column;
+}
+
+.cover {
+    width:150px;
+    aspect-ratio: 2/3;
+    background-color:aqua;
+}
+
+.title, .author {
+    padding:0px 10px;
+}
+
+.title {
+    font-size:16px;
+    margin:10px 0;
+}
+.author {
+    font-size: 14px;
+    margin-top:auto;
+}
+
+.info {
+    font-size:12px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pages {
+    padding:0 10px;
+    font-size:12px;
+}
+
+.read, .add-book {
+    flex:0;
+    min-width:fit-content;
+    font:inherit;
+    border:none;
+    background-color:darkgray;
+    padding:5px 7px;
+    margin:10px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:all 0.1s ease;
+    transform:scale(0.9);
+}
+.read:active, .add-book:active {
+    transform: scale(0.9);
+}
+.read:hover, .add-book:hover {
+    transform:scale(1);
+}
+
+.read-true {
+    background-color:green;
+    color:white;
+}
+
+.container:hover > .remove {
+    opacity:0.5;
+}
+
+.remove {
+    opacity:0;
+    background-color:darkgray;
+    border-radius:5px;
+    color:black;
+    font-size:24px;
+    border:none;
+    position:absolute;
+    cursor:pointer;
+    margin:10px;
+    right:0;
+    transition: all 0.1s ease;
+    transform: scale(0.9);
+}
+
+.container:hover > .remove:hover {
+    opacity:1;
+    transform: scale(1);
+}
+.remove:active {
+    background-color: red;
+}
+
+.add-book {
+    font-size:24px;
+    padding:15px 25px;
+    background-color: white;
+}
+
+
+/* Form */
+
+#form-background {
+    z-index: 1;
+    background-color: black;
+    opacity:0.7;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+#form-container {
+    z-index: 1;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#add-book-form {
+    z-index: 2;
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+    padding:25px 25px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+.form-label {
+    font-size:32px;
+    text-align: center;
+}
+.form-input {
+    min-width:fit-content;
+    font:inherit;
+    padding:15px 20px;
+    border-radius: 5px;
+    border:none;
+}
+
+.submit-btn, .cancel-btn {
+    font: inherit;
+}
+
+/* Header */
+#header {
+    background-color: lightgrey;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:25px;
+    margin-bottom:15px;
+}
+
