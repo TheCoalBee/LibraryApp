@@ -6,22 +6,27 @@
 
 #bookshelf {
     display:flex;
-    gap:15px;
+    gap:5px;
     flex-wrap: wrap;
+    justify-content: space-between;
+    padding:0 15px;
 }
 
 .container {
     position:relative;
     width:150px;
-    background-color:gray;
+    background-color: lightgrey;
+    border:5px solid gray;
     display:flex;
     flex-direction: column;
+    border-radius: 5px;
 }
 
 .cover {
     width:150px;
     aspect-ratio: 2/3;
     background-color:aqua;
+    border-bottom:5px solid gray;
 }
 
 .title, .author {
@@ -153,6 +158,9 @@
     padding:15px 20px;
     border-radius: 5px;
     border:none;
+}
+.form-input:focus {
+    outline:none;
 }
 
 .submit-btn, .cancel-btn {

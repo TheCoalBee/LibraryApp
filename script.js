@@ -1,11 +1,13 @@
 let library = [];
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.id = Math.floor(100000 + Math.random() * 900000)
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.id = Math.floor(100000 + Math.random() * 900000)
+    }
 }
 
 function addBookToLibrary(book) {
@@ -188,7 +190,5 @@ function generateHeaderDOM() {
 
     addBookDOM();
 }
-
-
 
 generateHeaderDOM();
